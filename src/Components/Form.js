@@ -6,9 +6,9 @@ import { useSelector } from "react-redux";
 
 const Form = ({onSubmit, formData, onChange, activeInd}) => {
   const users = useSelector(state => state.users);
-  if(!users){
-    return null;
-  }
+//   if(!users){
+//     return null;
+//   }
   return (
     <form onSubmit={onSubmit}>
       <div className="form-group">
