@@ -3,14 +3,13 @@
 */
 
 import React from "react";
-import { useSelector } from "react-redux";
 
 const UserList = ({users, handleEdit, handleDelete}) => {
   // const inputUser = useSelector(state => state.users);
   // if(!inputUser){
   //   return null;
   // }
-  console.log(users, "userArray");
+  //console.log(users, "userArray");
   return (
       <div>
       {users.map((user, index) => {
