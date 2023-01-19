@@ -4,20 +4,16 @@
   It uses the useSelector and useDispatch hooks from the 'react-redux' library to 
   access the state and dispatch actions, respectively.
 */
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Form from "./Components/Form";
 import UserList from "./Components/UserList";
-import { addUser, editUser, deleteUser, fetchUsers } from "./Components/actions";
+import { addUser, editUser, deleteUser } from "./Components/actions";
 import { v4 as uuidv4 } from "uuid";
 
 
 const App = () => {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchUsers());
-  }, [dispatch]);
 
   const [formData, setFormData] = useState({
     name: "",
