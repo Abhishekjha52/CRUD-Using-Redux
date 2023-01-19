@@ -26,7 +26,6 @@ const userReducer = (state = initialState, action) => {
       };
     case EDIT_USER:
       const updatedUsers = state.users.map((user, index) => {
-        console.log(user, index, action.payload);
         if (index === action.payload.index) {
           return action.payload.userData;
         }
