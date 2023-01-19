@@ -8,7 +8,7 @@
   This file contains the functions that dispatch the different types of actions that can be performed, 
   such as adding a user, editing a user, fetching users, and deleting a user.
 */
-import { ADD_USER, EDIT_USER, FETCH_USERS, RESET_USER, DELETE_USER, UPDATE_FORM_DATA} from "./types";
+import { ADD_USER, EDIT_USER, RESET_USER, DELETE_USER, UPDATE_FORM_DATA} from "./types";
 
 export const addUser = (userData, id) => {
   return {
@@ -21,13 +21,6 @@ export const editUser = (userData, index) => {
   return {
     type: EDIT_USER,
     payload: { userData, index }
-  };
-};
-
-export const fetchUsers = (index) => {
-  return {
-    type: FETCH_USERS,
-    payload: index
   };
 };
 
